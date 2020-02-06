@@ -9,7 +9,7 @@ body{
 /*------------------------MAIN PAGE-------------------------*/
 img{
   width:100%;
-  height:auto;
+  height:40vh;
 }
 
 .mainpagecontent{
@@ -133,7 +133,11 @@ nav{
     display: flex;
     flex-direction: column;
   }
+  img{
 
+    width:100%;
+    height:auto;
+  }
   /*----------------MAIN PAGE--------------------*/
 
   body{
