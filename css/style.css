@@ -1,0 +1,213 @@
+*{
+  padding:0px;
+  margin:0px;
+  box-sizing: border-box;
+}
+body{
+  background: #edf0f6;
+}
+/*------------------------MAIN PAGE-------------------------*/
+img{
+  width:100%;
+}
+
+.mainpagecontent{
+  display:flex;
+  flex-direction: column;
+
+}
+.flexbnanahai{
+  display: flex;
+  flex-direction: row;
+}
+.section1{
+  padding-left:1em;
+  padding-top: .5em;
+  padding-right:.5em;
+  width:80%
+}
+.section2{
+  width:20%;
+  padding-left:1em;
+  padding-top: 1em;
+  padding-right:.5em;
+}
+
+footer{
+  background-color: rgb(134,148,126);
+  width:100%;
+  padding-top:5px;
+  padding-bottom: 5px;
+  text-align: center;
+  font-style:  'Poppins' sans serif;
+  font-size:16px;
+}
+.section2 h4 {
+   text-align: center;
+}
+
+/*-----------------------MAIN PAGE---------------------------*/
+/* all logo and 4links and 3 lines summed up in nav and designed as flex*/
+nav{
+  position:sticky;
+  top:0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height:8vh;
+  background-color: #5D4954;
+  font-family: 'Poppins',sans-serif;
+}
+/* its "concept classes" styling */
+.logo{
+  color: rgb(226,226,226);
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1.5px;
+  font-size: 19px;
+
+}
+/* links grouped via div , classified as flex and their properties*/
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  width: 25%;
+}
+.nav-links  li{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* characteristics of links */
+.nav-links a{
+  color: rgb(226,226,226);
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 14px;
+
+  padding-left:1em;
+  padding-right:1em;
+}
+/*burger display when screen is large enough else goto media and display block*/
+.burger{
+  /*width:10%; /* no width*/
+  display:none;
+  cursor: pointer;
+}
+/* this is the characteristics of three lines */
+.burger div{
+  width:25px;
+  height:3px;
+  background-color:rgb(226,226,226);
+  margin:5px;
+  transition:all 0.3s ease-in;
+}
+/*--------flexbox of links-----------*/
+
+
+
+
+/*--------flexbox of links------------*/
+/* home ,about, etc will have width:60% */
+@media screen and (max-width:768px){
+     .nav-links{
+       width:60%;
+     }
+}
+/* media query */
+@media screen and (max-width:768px){
+  /*----------------MAIN PAGE---------------------*/
+  .mainpagecontent{
+    display:flex;
+    flex-direction: column;
+
+  }
+
+  .section1,.section2{
+    width:100%;
+  }
+  .flexbnanahai{
+    display: flex;
+    flex-direction: column;
+  }
+
+  /*----------------MAIN PAGE--------------------*/
+
+  body{
+    overflow-x: hidden;
+  }
+
+
+  .nav-links{
+    position: fixed;
+    right:0px;
+    height:100%;
+    top:8%;
+    background: #5D4954;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:40%;
+    transform:translateX(100%);  /* for this overflow- x hidden*/
+    transition: 0.5s ease-in;
+  }
+  .nav-links li{
+    opacity:0;
+
+  }
+  .burger{
+    display:block;
+
+
+
+  }
+}
+.nav-active {
+  transform:translateX(0%);
+
+}
+@keyframes navlinkfade {
+   from{
+     opacity:0;
+     transform:translateX(50px);
+   }
+   to{
+     opacity:1;
+     transform:translateX(0px);
+
+   }
+}
+.toggle .line1{
+transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+opacity:0;
+}
+
+.toggle .line3{
+transform: rotate(45deg) translate(-5px,-6px);
+}
+
+img{
+
+  width:100%;
+  height:75vh;
+}
+.nodp img{
+  display: none;
+
+}
+ .text{
+  display: none;
+}
+
+@media screen and (max-width:768px){
+
+     img{
+       height:40vh;
+       width:100%;
+     }
+
+}
